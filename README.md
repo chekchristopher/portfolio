@@ -13,7 +13,6 @@ About me section
 Contact information/form
 
 ## 🛠️ Built With
-HTML
-CSS
-JavaScript
+HTML,
+CSS,
 Formspree for message handling 💌
