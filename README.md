@@ -4,7 +4,7 @@ This site showcases my projects, skills, and career goals as a developer/designe
 
 ## 🔗 Live Demo
 Click here to visit the live site
-(Replace with your actual hosted link)
+https://chekchristopher.github.io/portfolio/
 
 ## 🚀 Features
 Clean, responsive design
