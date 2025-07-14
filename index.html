@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHEKWUBE CHRISTOPHER| Full-Stack Developer & Cybersecurity Specialist</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+    :root {
+        --primary: #2a3a4a;
+        --secondary: #1abc9c;
+        --dark: #1a252f;
+        --light: #f8f9fa;
+        --accent: #e74c3c;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: var(--primary);
+        line-height: 1.6;
+        background-color: #f5f7fa;
+    }
+    
+    /* Interactive Header */
+    header {
+        background: linear-gradient(135deg, var(--primary), var(--dark));
+        color: white;
+        padding: 2rem 0;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .profile-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 5px solid var(--secondary);
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+    }
+    
+    .profile-container:hover {
+        transform: scale(1.05);
+    }
+    
+    .profile-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .header-text {
+        max-width: 600px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Navigation */
+    nav {
+        background-color: var(--dark);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        position: relative;
+        padding: 0.5rem 0;
+    }
+    
+    .nav-links a:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--secondary);
+        transition: width 0.3s;
+    }
+    
+    .nav-links a:hover:after {
+        width: 100%;
+    }
+    
+    /* Sections */
+    section {
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .section-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        position: relative;
+    }
+    
+    .section-title h2 {
+        font-size: 2rem;
+        display: inline-block;
+        padding-bottom: 0.5rem;
+    }
+    
+    .section-title h2:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background-color: var(--secondary);
+    }
+    
+    /* About Section */
+    .about-content {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+    }
+    
+    .about-text {
+        flex: 1;
+    }
+    
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .skill-tag {
+        background-color: var(--secondary);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+    }
+    
+    /* Projects Section */
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 2rem;
+    }
+    
+    .project-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .project-img {
+        height: 200px;
+        overflow: hidden;
+    }
+    
+    .project-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    
+    .project-card:hover .project-img img {
+        transform: scale(1.1);
+    }
+    
+    .project-info {
+        padding: 1.5rem;
+    }
+    
+    .project-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+    
+    .tech-tag {
+        background-color: var(--primary);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+    }
+    
+    /* Cybersecurity Section */
+    .cyber-services {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    
+    .service-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s;
+    }
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .service-icon {
+        font-size: 2.5rem;
+        color: var(--secondary);
+        margin-bottom: 1rem;
+    }
+    
+    /* Contact Section */
+    .contact-container {
+        display: flex;
+        gap: 3rem;
+    }
+    
+    .contact-info {
+        flex: 1;
+    }
+    
+    .contact-form {
+        flex: 1;
+    }
+    
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+    
+    input, textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-family: inherit;
+    }
+    
+    button {
+        background-color: var(--secondary);
+        color: white;
+        border: none;
+        padding: 0.8rem 1.5rem;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background-color 0.3s;
+    }
+    
+    button:hover {
+        background-color: #16a085;
+    }
+    
+    /* Footer */
+    footer {
+        background-color: var(--dark);
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+    }
+    
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .social-links a {
+        color: white;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+    
+    .social-links a:hover {
+        color: var(--secondary);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .header-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .profile-container {
+            margin-bottom: 2rem;
+        }
+        
+        .about-content {
+            flex-direction: column;
+        }
+        
+        .contact-container {
+            flex-direction: column;
+        }
+        
+        .nav-links {
+            gap: 1rem;
+        }
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+</head>
+<body>
+    <!-- Header with Profile Image -->
+    <header>
+        <div class="header-content">
+            <div class="profile-container">
+                <!-- Replace with your image -->
+                <img src="images/1000121073.png" alt="chekwube christopher profile picture">
+            </div>
+            <div class="header-text">
+                <h1>Chekwube Christopher</h1>
+                <p class="tagline">Full-Stack Web Developer | SQL Database Architect | Cybersecurity Specialist</p>
+                <p>Building secure, scalable web applications with a focus on performance and user experience.</p>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Chekwube Christopher</div>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#cybersecurity">Cybersecurity</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>With over 3 years of experience in web development, and entry level in database management & cybersecurity, I specialize in creating robust, secure web applications with optimized database architectures. My approach combines technical expertise with a keen eye for detail to deliver solutions that are both functional and secure.</p>
+                
+                <p>I hold certifications in [list relevant certifications] and stay current with the latest security threats and mitigation techniques to ensure all projects I work on meet the highest security standards.</p>
+                
+                <h3>Technical Skills</h3>
+                <div class="skills">
+                    <span class="skill-tag">HTML5/CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React/Next.js</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">SQL (SQL server,MySQL)</span>
+                    <span class="skill-tag">Database Optimization</span>
+                    <span class="skill-tag">Data Analyst</span>
+                    <span class="skill-tag">Network Security</span>
+                    <span class="skill-tag">Security Auditing</span>
+                    <span class="skill-tag">API Security</span>
+                    <span class="skill-tag">Cloud Security (AWS/Azure)</span>
+                </div>
+
+                <h3>Other Skills</h3>
+                <div class="skills">
+                    <span class="skill-tag">Teaching Tech Skills</span>
+                    <span class="skill-tag">Ssocial Media SEO</span>
+                    <span class="skill-tag">Social Media Management</span>
+                    <span class="skill-tag">Copy and paste</span>
+                    <span class="skill-tag">Typing</span>
+                    <span class="skill-tag">Content Writing</span>
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">Effective Leadership</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-title">
+            <h2>Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/9javerify screenshot.png" alt="Secure E-commerce Platform">
+                </div>
+                <div class="project-info">
+                    <h3>9jaVerify</h3>
+                    <p>9jaVerify is a lightweight, developer-friendly solution designed to distinguish real users from bots. By integrating our service into your website or application, you can protect your platform from spam, abuse, and automated attacks — without compromising user experience.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">UI/UX</span>
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">Javascript</span>
+                    </div>
+                    <a href="https://chekchristopher.github.io/9javerify/" class="btn">View Case Study</a>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            
+            <!-- Project 3 -->
+        </div>
+    </section>
+    
+    <!-- Cybersecurity Section -->
+    <section id="cybersecurity">
+        <div class="section-title">
+            <h2>Cybersecurity Services</h2>
+        </div>
+        <div class="cyber-services">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Security Audits</h3>
+                <p>Comprehensive application security assessments identifying vulnerabilities and providing actionable remediation plans.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Database Security</h3>
+                <p>Secure database configuration, access control implementation, and SQL injection prevention strategies.</p>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <h3>Secure Development</h3>
+                <p>Building applications with security baked in from the ground up following OWASP best practices.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fas fa-envelope"></i> chekchris85@gmail.com</p>
+                <p><i class="fas fa-phone"></i> (234) 8148914708</p>
+                <p><i class="fas fa-map-marker-alt"></i> Anambra state, Nigeria</p>
+                
+                <h3>Availability</h3>
+                <p>Currently available for:</p>
+                <ul>
+                    <li>Web development projects</li>
+                    <li>Database architecture consulting</li>
+                    <li>Security assessments</li>
+                    <li>Training workshops</li>
+                </ul>
+            </div>
+            
+            <div class="contact-form">
+                <form action="https://formspree.io/f/mrblzqed" method="POST">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" name="fullname" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea rows="5" placeholder="Your Message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/chekchristopher"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/chekwubechristopher"><i class="fab fa-linkedin"></i></a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=youremail@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p>&copy; 2025 Chekwube Christopher All rights reserved.</p>
+        <p>Designed with security and performance in mind.</p>
+    </footer>
+</body>
+</html>
