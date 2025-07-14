@@ -1,0 +1,19 @@
+## 🌐 Personal Portfolio Website
+Welcome to my personal portfolio website!
+This site showcases my projects, skills, and career goals as a [developer/designer/tech enthusiast — customize this based on your role].
+
+## 🔗 Live Demo
+Click here to visit the live site
+(Replace with your actual hosted link)
+
+## 🚀 Features
+Clean, responsive design
+Project showcase with links
+About me section
+Contact information/form
+
+## 🛠️ Built With
+HTML
+CSS
+JavaScript
+Formspree for message handling 💌
