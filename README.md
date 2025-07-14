@@ -1,6 +1,6 @@
 ## 🌐 Personal Portfolio Website
 Welcome to my personal portfolio website!
-This site showcases my projects, skills, and career goals as a [developer/designer/tech enthusiast — customize this based on your role].
+This site showcases my projects, skills, and career goals as a developer/designer/tech enthusiast/cyber security specialist/database manager
 
 ## 🔗 Live Demo
 Click here to visit the live site
